@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    
+    <script src="./throw.js"></script>
+  </head>
+  <body>
+    <a-scene id="scene">
+
+      <!--Assets-->
+      <a-assets>
+          <a-asset-item
+            id="pin"
+            src="./models/pin/scene.gltf"
+          ></a-asset-item>
+        
+      </a-assets>
+      
+      <!--Camera and Cursor-->
+      <a-entity
+        id="camera"
+        camera
+        position="0 1.6 0"
+        wasd-controls
+        look-controls="pointerLockEnabled: false"        
+      >
+       
+        <a-cursor id="cursor" ></a-cursor>        
+      </a-entity>
+
+      <!--Bowling Balls-->
+      <a-entity ball></a-entity>
+
+     
+        <a-entity
+          id="pin"
+          gltf-model="#pin"
+          position="0 0 -1"
+          
+          scale="4 4 4"          
+        >
+      </a-entity>
+    </a-entity>
+            
+      
+  </body>
+</html>
